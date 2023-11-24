@@ -1,0 +1,35 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "This repository is Task 2 of course NodeJs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs",
+    "cat": "node ./src/cat.js",
+    "add": "node ./src/add.js",
+    "rn": "node ./src/rn.js",
+    "rm": "node ./src/rm.js",
+    "cp": "node ./src/cp.js",
+    "mv": "node ./src/mv.js",
+    "os": "node ./src/os.js",
+    "hash": "node ./src/hash.js",
+    "compress": "node ./src/compress.js",
+    "decompress": "node ./src/decompress.js",
+    "up": "node ./src/up.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jika1995/File-manager.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Zhibek Abdykalykova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jika1995/File-manager/issues"
+  },
+  "homepage": "https://github.com/Jika1995/File-manager#readme"
+}
