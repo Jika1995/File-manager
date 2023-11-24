@@ -27,7 +27,7 @@ export const osOperations = async (args) => {
             console.log(process.arch);
             break
         default:
-            console.log('No arguments');
+            console.log('Invalid Input');
             return
     }
 }

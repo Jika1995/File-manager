@@ -1,7 +1,8 @@
-import fs from 'fs'
+import fs from 'fs/promises'
 
 export const list = async () => {
     const files = await fs.readdir(`${process.cwd()}`, { withFileTypes: true })
+    // console.log(files);
 
     const changedFiles = files.map((file) => ({
         Name: file.name,

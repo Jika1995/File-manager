@@ -1,13 +1,19 @@
-import fs from 'fs'
+import fs from 'fs/promises'
+import path from 'path'
 
 export const add = async (args) => {
 
-    fs.writeFile(`${args}`, '', (err) => {
-        if (err) {
-            throw `${err}`
-        } else {
-            console.log('File has been created successfully');
-        }
-    })
+    try {
+        await fs.writeFile(path.resolve(args), '', (err) => {
+            if (err) {
+                throw `Invalid input: ${err}`
+            } else {
+                console.log('File has been created successfully');
+            }
+        })
+    } catch (error) {
+        console.log('Invalid Input', error)
+    }
+
 }
 

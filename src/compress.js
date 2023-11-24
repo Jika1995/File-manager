@@ -7,7 +7,7 @@ export const compress = async (args) => {
 
     const archivedFilePath = `${args[1]}/${fileName}.gz`
 
-    const handleStream = createReadStream(`${args}`)
+    const handleStream = createReadStream(`${args[0]}`)
     handleStream
         .pipe(createGzip())
         .pipe(createWriteStream(`${archivedFilePath}`))

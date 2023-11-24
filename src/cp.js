@@ -1,11 +1,12 @@
-import fs from 'fs'
+import fs from 'fs';
+import path from 'path'
 
 export const copy = async (args) => {
 
-    const inputStream = fs.createReadStream(args[0])
+    const inputStream = fs.createReadStream(path.resolve(args[0]))
     const fileName = args[0].split('/').pop().split('.')[0]
     const fileCopyPath = `${args[1]}/${fileName}-copy`
-    const outputStream = fs.createWriteStream(fileCopyPath);
+    const outputStream = fs.createWriteStream(path.resolve(fileCopyPath));
 
     // console.log(fileName, fileCopyPath);
 
